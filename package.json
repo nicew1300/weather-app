@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "dev": "webpack serve",
+    "build": "webpack --config webpack.prod.js",
+    "dev": "webpack serve --config webpack.dev.js",
     "deploy": "npm run build && git checkout gh-pages && git merge main --no-edit && git add dist -f && git commit -m \"Deployment\" && git subtree push --prefix dist origin gh-pages && git checkout main",
     "lint": "eslint src",
     "format": "prettier --write ."
@@ -13,7 +13,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "css-loader": "^7.1.4",
