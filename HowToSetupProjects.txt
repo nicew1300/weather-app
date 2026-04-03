@@ -1,0 +1,53 @@
+1. Copy your template structure
+
+Copy these files/folders into the new project:
+
+.gitignore
+package.json
+package-lock.json
+webpack.config.js
+.gitignore
+src/
+
+Inside src/ you should have something like:
+
+src/
+├─ index.js
+├─ styles/{css files}
+└─ template.html
+
+You do NOT copy:
+
+node_modules
+dist
+
+Those should not exist yet.
+
+2. Install dependencies
+
+Then run:
+
+npm install
+
+What this does:
+
+reads package.json
+
+uses package-lock.json to install exact versions
+
+recreates node_modules
+
+So all your webpack packages get installed automatically.
+
+3. Start the development server
+
+Then run:
+
+npx webpack
+
+and Then
+
+npx webpack serve
+
+Open:
+http://localhost:8080
