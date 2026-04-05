@@ -1,34 +1,90 @@
-Quick Start Guide for Webpack Template
-Step 1: Create a new project from the template
+# Weather App
 
-Go to your webpack-template GitHub repository.
+## Description
 
-Click Use this template → Create a new repository.
+Weather App project from The Odin Project Full Stack JavaScript course. Built using HTML, CSS, and JavaScript modules with Webpack for bundling and dependency management. This project focused on asynchronous JavaScript patterns and real-world API integration by fetching live forecast data from the Visual Crossing Weather API.
 
-Step 3: Install dependencies
+Compared to earlier DOM projects, this one required more complex data flow: handling user input, performing async requests, managing loading/error states, mapping API responses into display-ready UI data, and keeping the interface responsive while switching units and rendering multi-day forecast cards.
+
+## Key Features
+
+- Search weather by city using live API data.
+- Dynamic weather rendering for current conditions and a five-day forecast.
+- Temperature unit switcher (C/F) with UI state updates.
+- Dynamic weather icon mapping based on API icon identifiers.
+- Error handling for invalid city input or failed requests.
+- Responsive layout using CSS Grid and Flexbox.
+- Custom visual styling including gradient sky background, glow effects, and interactive UI transitions.
+
+## Learning Outcomes
+
+- Built confidence using asynchronous JavaScript with `fetch`, `async/await`, and Promise-based workflows.
+- Practiced handling API response objects and transforming nested data into clean UI models.
+- Improved understanding of state-driven UI behavior (search state, unit state, rendered state).
+- Learned practical error handling patterns for user-facing async apps.
+- Improved module organization by separating API logic and DOM rendering responsibilities.
+- Strengthened CSS layout and component styling skills for a more polished frontend.
+
+## Tech Stack
+
+- HTML5
+- CSS3
+- JavaScript (ES Modules)
+- Webpack
+- npm
+- Visual Crossing Weather API
+
+## Run Locally
+
+1. Install dependencies:
+
+```bash
 npm install
+```
 
-Step 4: Development mode
+2. Start development server:
+
+```bash
 npm run dev
+```
 
-Runs webpack serve.
+3. Create production build:
 
-Use this while coding your project.
-
-Step 5: Production build
+```bash
 npm run build
+```
 
-Compiles your code for production into the dist/ folder.
+## Deploy To GitHub Pages
 
-Optimized for deployment.
+1. Push your latest code to `main`.
 
-Step 6: Deployment to GitHub Pages
+2. Run deploy:
+
+```bash
 npm run deploy
+```
 
-Pushes your dist/ folder to the gh-pages branch.
+This builds the project and pushes the `dist` folder to the `gh-pages` branch using `git subtree`.
 
-Your project will be live on GitHub Pages.
+3. In GitHub repository settings:
 
-Make sure your GitHub Pages source branch is set to gh-pages in the repository settings.
+- Go to **Settings -> Pages**.
+- Under **Build and deployment**, choose **Deploy from a branch**.
+- Set branch to **gh-pages** and folder to **/(root)**.
+- Save.
 
-For updates, repeat Step 5 + Step 6.
+4. Wait about 1-3 minutes for the first publish. Your site will be available at:
+
+`https://<your-username>.github.io/<your-repo-name>/`
+
+### Notes
+
+- If `npm run deploy` says there is no upstream for `main`, run:
+
+```bash
+git push -u origin main
+```
+
+- If deployment ends with `fatal: no new revisions were found`, there were no new build changes to publish. Make a code change, then run deploy again.
+
+- If GitHub Pages still shows 404, verify that the project name in the URL exactly matches your repository name.
