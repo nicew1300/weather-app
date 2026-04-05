@@ -72,12 +72,20 @@ body {
   background-attachment: fixed;
 }
 
+.wrapper {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 2fr;
+}
+
 .header {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  min-height: 133.06px;
+  max-height: 133.06px;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr;
   grid-auto-flow: column;
   align-items: center;
-  padding: 2rem;
   border-bottom: solid 5px var(--darker-primary);
 }
 
@@ -195,4 +203,86 @@ button:active {
   align-items: center;
   gap: 0.5rem;
   justify-self: center;
+}
+
+.error-div {
+  position: absolute;
+  top: 5%;
+  left: 1.5%;
+  translate: 100% -50%;
+  color: red;
+  font-weight: bold;
+  padding: 1rem;
+  text-align: center;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  padding: 5rem;
+  padding-bottom: 0;
+  gap: 3rem;
+}
+
+.loading {
+  opacity: 0.5;
+  pointer-events: none;
+  user-select: none;
+}
+
+.CW-container {
+  justify-self: center;
+  align-self: stretch;
+  width: 50%;
+  border: solid 5px var(--darker-primary);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr repeat(5, 0.5fr);
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  color: var(--darker-primary);
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.CW-icon {
+  justify-self: center;
+  width: 150px;
+  height: 150px;
+  outline: none;
+  border: none;
+}
+
+.next-day-icon {
+  width: 90px;
+  height: 90px;
+}
+
+.next-days-container {
+  grid-row: 2 / 2;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+.next-day {
+  justify-self: center;
+  align-self: center;
+  width: 100%;
+  height: 70%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.7fr 0.7fr 1.2fr repeat(2, 0.7fr);
+  justify-items: center;
+  align-items: center;
+  border: solid 3px var(--darker-primary);
+  border-radius: 10px;
+  color: var(--darker-primary);
+  font-weight: 900;
+}
+
+.next-day-conditions {
+  text-align: center;
 }
