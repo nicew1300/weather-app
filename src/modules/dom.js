@@ -49,6 +49,7 @@ let lastSearchedCity = '';
 
 function renderSite() {
   // this function looks insane, i truly do hope someone made a framework for this type of stuff that is called React or something, i wonder if it exists yet
+  // should have split this into smaller functions
   const wrapper = makeEle('div', 'wrapper');
   document.body.appendChild(wrapper);
 
