@@ -64,7 +64,7 @@ npm run build
 npm run deploy
 ```
 
-This builds the project and pushes the `dist` folder to the `gh-pages` branch using `git subtree`.
+This builds the project and publishes the `dist` folder to the `gh-pages` branch using the `gh-pages` package.
 
 3. In GitHub repository settings:
 
@@ -85,6 +85,6 @@ This builds the project and pushes the `dist` folder to the `gh-pages` branch us
 git push -u origin main
 ```
 
-- If deployment ends with `fatal: no new revisions were found`, there were no new build changes to publish. Make a code change, then run deploy again.
+- On the first successful deploy, the `gh-pages` branch is created automatically.
 
 - If GitHub Pages still shows 404, verify that the project name in the URL exactly matches your repository name.
