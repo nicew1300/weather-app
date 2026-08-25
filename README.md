@@ -54,34 +54,6 @@ npm run dev
 npm run build
 ```
 
-## Deploy To GitHub Pages
-
-1. Push your latest code to `main`.
-
-2. Run deploy:
-
-```bash
-npm run deploy
-```
-
-This builds the project and publishes the `dist` folder to the `gh-pages` branch using the `gh-pages` package.
-
-3. In GitHub repository settings:
-
-- Go to **Settings -> Pages**.
-- Under **Build and deployment**, choose **Deploy from a branch**.
-- Set branch to **gh-pages** and folder to **/(root)**.
-- Save.
-
-4. Wait about 1-3 minutes for the first publish. Your site will be available at:
-
-`https://<your-username>.github.io/<your-repo-name>/`
-
-### Notes
-
-- If `npm run deploy` says there is no upstream for `main`, run:
-
-```bash
 git push -u origin main
 ```
 
